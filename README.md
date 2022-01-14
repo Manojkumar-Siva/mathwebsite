@@ -35,12 +35,210 @@ Validate the HTML code.
 Publish the website in the given URL.
 
 ## PROGRAM :
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mathematical Calculations</title>
+    <h1>MATHEMATICAL CALCULATIONS</h1>
+    <style>
+      * {
+       box-sizing: border-box;
+       font-family: Arial, Helvetica, sans-serif;
+        }
+       body{
+           background-color: #e65830;
+       }
+       .container{
+           width:1080px;
+           margin-left: auto;
+           margin-right: auto;
+       }
+       .content{
+           display: block;
+           width:100%;
+           background-color: lightcoral;
+           margin-top: 150px;
+           min-height:500px;
+       }
+       h1{
+           text-align: center;
+           margin-top: 15;
+       }
+       .formelement{
+           text-align: center;
+           font-size: 30px;
+           font-style:normal;
+           margin-top: 15px;
+       }
+       .text{
+           text-decoration:underline;
+           font-style: oblique;
+           font-size: 30px;
+       }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <h1 class="text ">Volume of Cuboid</h1>
+        <form>
+            <div class="formelement">
+                <label for="lenedit">Length:</label>
+                <input type="text" id="lenedit"/>cm
+            </div> 
+            <div class="formelement">
+                <label for="wedit">Width:</label>
+                <input type="text" id="wedit"/>cm
+            </div>
+            <div class="formelement">
+              <label for="hedit">Height:</label>
+              <input type="text" id="hedit"/>cm
+          </div>
+            <div class="formelement">
+                <input type="button" value="CALCULATE" id="addbutton"/>
+            </div>
+            <div class="formelement">
+                <label for="voledit">Volume:</label>
+                <input type="text" id="voledit" value=0 readonly/>cm³
+            </div>
+        </form>
+    </div>
+</div>
+ <script type="text/javascript">
+ var button;
+ button=document.querySelector("#addbutton");
+ button.addEventListener("click",function(){
+  var lentext,wtext,htext,voltext;
+  var lenval,wval,hval,volval;
+  
+  lentext=document.querySelector("#lenedit");
+  wtext=document.querySelector("#wedit");
+  htext=document.querySelector("#hedit");
+  voltext=document.querySelector("#voledit")
 
---include your code--
+  lenval=parseFloat(lentext.value);
+  wval=parseFloat(wtext.value);
+  hval=parseFloat(htext.value);
+  volval=parseFloat(voltext.value);
+  volval=lenval*wval*hval;
+  voltext.value=""+volval;
+  
+
+});
+</script>
+<style>
+  * {
+   box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif;
+    }
+   body{
+       background-color: #e65830;
+   }
+   .container{
+       width:1080px;
+       margin-left: auto;
+       margin-right: auto;
+   }
+   .content{
+       display: block;
+       width:100%;
+       background-color: #7fe630;
+       margin-top: 150px;
+       min-height:500px;
+   }
+   .content1{
+       display: block;
+       width:100%;
+       background-color:#3055e6;
+       margin-top: 150px;
+       min-height: 500px;
+   }
+   h1{
+       text-align: center;
+       margin-top: 15;
+   }
+   .formelement{
+       text-align: center;
+       font-size: 30px;
+       font-style:normal;
+       margin-top: 15px;
+   }
+   .by{
+       text-align: center;
+       font-style: italic;
+       font-size: 30px;
+       color:beige;
+    }
+     </style>
+ <body>
+      <div class="container">
+        <div class="content1">
+            <h1 class="text"> Area Of Triangle</h1>
+            <form>
+                <div class="formelement">
+                    <label for="breadthedit">Breadth: </label>
+                    <input type="text" id="breadthedit"/>cm
+                </div> 
+                <div class="formelement">
+                    <label for="heightedit">Height:  </label>
+                    <input type="text" id="heightedit"/>cm
+                </div>
+                <div class="formelement">
+                    <input type="button" value="CALCULATE" id="tributton"/>
+                </div>
+                <div class="formelement">
+                    <label for="triedit">Area:</label>
+                    <input type="text" id="triedit" value=0 readonly/>cm²
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function validate(){
+            var user1=document.getElementById("breadthedit").value;
+            var user2=document.getElementById("heightedit").value;
+            var re=/^[0-9]+$/;
+            if(re.test(user1)){
+                return true;
+            }
+            else if(re.test(user2)){
+                return true;
+            }
+            else{
+                alert("Please input numeric characters only");
+                return false;
+            }
+        }
+    </script>
+  <script type="text/javascript">
+     var button;
+     button=document.querySelector("#tributton");
+      button.addEventListener("click",function(){
+       var breadthtext,heighttext,tritext;
+       var breadthval,heightval,trival;
+  
+       breadthtext=document.querySelector("#breadthedit");
+       heighttext=document.querySelector("#heightedit");
+       tritext=document.querySelector("#triedit");
+  
+       breadthval=parseInt(breadthtext.value);
+       heightval=parseInt(heighttext.value);
+       trival=0.5*breadthval*heightval;
+       tritext.value=""+trival;
+      });
+  </script>
+  <footer> <p class="by"> <B> Done By : S.MANOJ KUMAR</B></p></footer>
+ </body>
+</html>
+```
 
 ## OUTPUT:
 
--- include your output screenshots ---
+![OUTPUT](./calculations/moutput.jpg)
 
 ## Result:
 
